@@ -5,6 +5,9 @@
 class Printer
 {
 public:
+    Printer();
+    ~Printer();
+
     void onDataRecieved(unsigned char);
 
     void run();

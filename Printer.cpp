@@ -4,6 +4,13 @@
 #include <iomanip>
 #include <exception>
 
+Printer::Printer() = default;
+
+Printer::~Printer()
+{
+    stop();
+}
+
 void Printer::onDataRecieved(unsigned char data)
 {
     auto lock = std::lock_guard(_mutex);
